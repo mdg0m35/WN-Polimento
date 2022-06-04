@@ -1,0 +1,333 @@
+<nav>
+  <a href="#"
+    ><img
+      src="../assets/imagens/NavWn.jpg"
+      alt=""
+      style="width: 20%; height: 50px"
+  /></a>
+</nav>
+<div class="container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        style="background-color: rgba(136, 136, 136, 0.708)"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        style="background-color: rgba(128, 128, 128, 0.767)"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          class="slide"
+          src="../assets/imagens/slideWn.jpg"
+          style="height: 10%"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block"></div>
+      </div>
+
+      <div class="carousel-item">
+        <img
+          class="slide"
+          src="../assets/imagens/slideWnback.jpg"
+          style="height: 10%"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption d-none d-md-block"></div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon"
+        style="background-color: black"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon"
+        style="background-color: black"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!--container-->
+
+<main>
+  <div class="container">
+    <div class="bordas">
+      <h1 class="animate">
+        Faça o seu Agendamento!
+        <img
+          src="../assets/imagens/cliqueaqui.gif"
+          alt=""
+          width="40"
+          height="50"
+        />
+      </h1>
+
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="form-group col-md-8 col-xs-8 col-8">
+          <label for="validationCustom01" class="form-label"
+            >Nome Completo:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            placeholder="Digite seu nome!"
+            [(ngModel)]="cadastro.nome"
+            name="nome"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="form-group col-md-4 col-xs-4 col-4">
+          <label for="validationCustom05" class="form-label"
+            >Polimento Completo?</label
+          >
+          <div class="form-check">
+            <input
+              type="radio"
+              id="sim"
+              name="fav_language"
+              value="Sim"
+              [(ngModel)]="cadastro.polimentoCompleto"
+              name="polimentoompleto"
+            />
+            <label>Sim</label><br />
+            <input
+              type="radio"
+              id="nao"
+              name="fav_language"
+              value="Não"
+              [swal]="{
+                title: 'Mais detalhes chame no Whatsapp',
+                text: 'Deseja continuar?',
+                showDenyButton: true,
+                denyButtonText: 'Não',
+                confirmButtonText: 'Sim',
+                icon: 'warning'
+              }"
+              (confirm)="encaminhar()"
+            />
+            <label>Não</label><br />
+          </div>
+        </div>
+
+        <div class="form-group col-md-3 col-xs-3 col-3">
+          <label for="validationCustom04" class="form-label">Cidade:</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            [(ngModel)]="cadastro.cidade"
+            name="cidade"
+            required
+          >
+            <option selected disabled>selecione</option>
+            <option>Blumenau</option>
+            <option>Indaial</option>
+            <option>Gaspar</option>
+            <option>Pomerode</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        <div class="form-group col-md-3 col-xs-3 col-3">
+          <label for="validationCustom04" class="form-label">Bairro:</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            [(ngModel)]="cadastro.bairro"
+            name="bairro"
+            required
+          >
+            <option selected disabled>Selecione</option>
+
+            <option>Itoupavazinha</option>
+            <option>Água Verde</option>
+            <option>Badenfurt</option>
+            <option>Boa Vista</option>
+            <option>Bom Retiro</option>
+            <option>Centro</option>
+            <option>Glória</option>
+            <option>Salto</option>
+            <option>Escola Agrícola</option>
+            <option>Fidélis</option>
+            <option>Fortaleza</option>
+            <option>Fortaleza Alta</option>
+            <option>Garcia</option>
+            <option>Itoupava Central</option>
+            <option>Itoupava Seca</option>
+            <option>Itoupava Norte</option>
+            <option>Jardim Blumenau</option>
+            <option>Nova Esperança</option>
+            <option>Passo Manso</option>
+            <option>Ponta Aguda</option>
+            <option>Progresso</option>
+            <option>Ribeirão Fresco</option>
+            <option>Salto do Norte</option>
+            <option>Salto Weissbach</option>
+            <option>Testo Salto</option>
+            <option>Tribess</option>
+            <option>Valparaíso</option>
+            <option>Valparaíso</option>
+            <option>Velha</option>
+            <option>Velha Central</option>
+            <option>Victor Konder</option>
+            <option>Vila Formosa</option>
+            <option>Vila Itoupava</option>
+            <option>Vila Nova</option>
+            <option>Vorstadt</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+        <div class="form-group col-md-6 col-xs-6 col-6">
+          <label for="validationCustom05" class="form-label">Rua:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom05"
+            [(ngModel)]="cadastro.rua"
+            name="rua"
+            required
+          />
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+        <div class="form-group col-md-2 col-xs-2 col-2">
+          <label for="validationCustom05" class="form-label">Numero:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="validationCustom05"
+            [(ngModel)]="cadastro.numero"
+            name="numero"
+            required
+          />
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+
+        <div class="form-group col-md-3 col-xs-3 col-3">
+          <label for="validationCustom05" class="form-label"
+            >Complemento:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom05"
+            [(ngModel)]="cadastro.complemento"
+            name="complemento"
+            required
+          />
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+        <div class="form-group col-md-3 col-xs-3 col-3">
+          <label for="validationCustom05" class="form-label">Tipo:</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            [(ngModel)]="cadastro.tipo"
+            name="tipo"
+            required
+          >
+            <option selected disabled>Selecione</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3 col-xs-4 col-4">
+          <label for="validationCustom05" class="form-label">Telefone:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="validationCustom05"
+            nome="telefone"
+            [(ngModel)]="cadastro.telefone"
+            name="telefone"
+            required
+          />
+          <div class="invalid-feedback">Please provide a valid zip.</div>
+        </div>
+
+        <div class="form-group col-md-4 col-xs-5 col-5">
+          <label for="validationCustom05" class="form-label">Data</label>
+          <input
+            type="date"
+            class="form-control"
+            id="validationCustom05"
+            [(ngModel)]="cadastro.data"
+            name="data"
+            required
+          />
+        </div>
+
+        <div class="form-group col-md-4 col-xs-5 col-5">
+          <label for="validationCustom05" class="form-label">Hora</label>
+          <input
+            type="time"
+            class="form-control"
+            id="validationCustom05"
+            [(ngModel)]="cadastro.hora"
+            name="hora"
+            required
+          />
+        </div>
+
+        <div class="col-12">
+          <button class="btn" type="submit" (click)="salvarAgendamento()">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--container-->
+  </div>
+  <!--bordas-->
+</main>
+
+<footer style="background: transparent !important">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb">
+      <!-- Facebook -->
+      <a class="iconeWhatsapp" href="https://contate.me/WnPolimentos" role="button"
+        ><img src="../assets/imagens/whatsapp.png" alt=""
+      /></a>
+      <!-- Instagram -->
+      <a class="iconeInstagram" href="https://instagram.com/wn_polimento?igshid=YmMyMTA2M2Y=" role="button"
+        ><img src="../assets/imagens/instagram.png" alt=""
+      /></a>
+    </section>
+  </div>
+
+  <div class="backgroundFooter">
+    © 2022 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDGomes</a>
+  </div>
+</footer>
