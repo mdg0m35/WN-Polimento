@@ -11,6 +11,28 @@
 table {
   width: 100%;
 }
+.list{
+  border: 20px solid rgba(247, 239, 239, 0.236);
+  background-color: rgba(0, 0, 0, 0.437);
+
+}
+
+span{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(61, 55, 55);
+  font-size: 11px;
+
+}
+
+td{
+  color: rgba(255, 255, 255, 0.764);
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 0px 4px rgba(6, 0, 0, 0.75);
+}
+
 
 .mat-header-cell{
   background-color: rgba(2, 14, 20, 0.727) !important;
@@ -20,27 +42,35 @@ table {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 .btnlist{
   background:rgb(249, 4, 4) ;
   color: white ;
   font-size: 9px;
   text-align: center;
-  border: 0;
+  border: 5px solid rgba(57, 60, 57, 0.764);
   border-radius: 50rem;
+  margin-right: 10px;
+  float: right;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 
 }
 .btnlist:hover{
   background:rgb(114, 3, 3) ;
   color: rgb(0, 0, 0) ;
   text-align: center;
+  float: right;
 }
 
 label{
   color: black;
   background-color: black;
 }
-
+/*
 td,th{
   font-size: 11px;
   font-weight: bold;
@@ -50,7 +80,7 @@ th{
   text-align: center;
   color: rgb(255, 255, 255);
 
-}
+}*/
 .tamsanho{
   width: 150px;
 
@@ -58,4 +88,21 @@ th{
 
 .center{
   text-align: center;
+}
+
+@media (max-width: 767px){
+  .logo{
+    float:right;
+    text-transform: uppercase;
+    font-weight: bold
+  }
+
+}
+
+@media(max-width: 360px){
+  .logo{
+    float:right;
+    text-transform: uppercase;
+    font-weight: bold
+  }
 }

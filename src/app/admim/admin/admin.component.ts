@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
     .subscribe(dados => this.lista = dados)
   }
 
-  deletar(id:string){
+  deletar(id:any){
     this.service.excluir(id).subscribe(retorno => {
       location.reload()
       this.service.exibirMensangens(

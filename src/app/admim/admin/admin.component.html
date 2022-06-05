@@ -13,7 +13,63 @@
 
 <main>
 
- <table mat-table [dataSource]="lista" class="mat-elevation-z8">
+<table *ngFor="let list of lista" >
+  <ol  class="list">
+    <ul>
+
+    <tbody>
+    <tr>
+    <td>
+          <br>
+      <span>Nome:</span>
+      {{ list.nome }}
+      <button type="button" class="btnlist" [swal]="{
+        title:'ATENÇÃO !!!',
+        text:'Deseja realmente excluir?',
+        showDenyButton:true,
+        denyButtonText:'Não',
+        confirmButtonText:'Sim'
+
+      }"(confirm)="deletar(list._id)">Exluir</button><br>
+
+      <span>Telefone:</span>
+      {{ list.telefone }}
+      <a class="localizacao" href="https://contate.me/WnPolimentos" role="button"
+      ><img src="../assets/imagens/whatsapp.png" alt=""
+    /></a><br>
+
+      <span>Polimento Completo:</span>
+      {{ list.polimentoCompleto }}<br>
+
+      <span>Rua:</span>
+      {{ list.rua }}
+      <span>Nº:</span>
+      {{ list.numero }}
+      <span>Bairro:</span>
+      {{ list.bairro }}
+      <span>Cidade:</span>
+      {{ list.cidade }}
+
+      <a class="localizacao" (click)="localizacao(list.rua,list.numero,list.bairro,list.cidade)"><img src="../assets/imagens/map.png" alt=""></a>
+      <br>
+      <span>Data:</span>
+      {{ list.data }}
+
+      <span>Hora:</span>
+      {{ list.hora }}
+      <hr class="mt-3"/>
+
+    </td>
+    </tr>
+  </tbody>
+
+</ul>
+</ol>
+  </table>
+</main>
+
+
+ <!--<table mat-table [dataSource]="lista" class="mat-elevation-z8">
 
     <ng-container matColumnDef="nome" >
       <th mat-header-cell *matHeaderCellDef class="tamanho" > Nome </th>
@@ -86,5 +142,4 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-</main>
+  </table>-->
