@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  API :"https://api-wn-polimento.herokuapp.com/api/agendamento"
+
 };
