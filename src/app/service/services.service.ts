@@ -13,7 +13,7 @@ import { loginModelo } from '../models/loginModelo';
 })
 export class ServicesService {
 
-  private API: string = environment.API;
+  private API: string = environment.APIURL;
 
   //autenticação
 
