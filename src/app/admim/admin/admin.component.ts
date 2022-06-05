@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Lista } from 'src/app/admin/model/lista';
 import { ServicesService } from 'src/app/service/services.service';
 
@@ -9,20 +10,19 @@ import { ServicesService } from 'src/app/service/services.service';
 })
 export class AdminComponent implements OnInit {
 
-  lista: Lista[]=[];
+  lista$!:Observable< Lista[]>;
   displayedColumns = ['nome','telefone','rua','numero','cidade','bairro','tipo','data','hora','polimentoCompleto','localizacao','Excluir']
 
-  constructor(private service:ServicesService) { }
+  constructor(private service:ServicesService) {
+    this.lista$ = this.service.listarTodos()
+  }
 
   ngOnInit(): void {
-    this.listaCad();
+
 
   }
 
-  listaCad(): void{
-    this.service.listarTodos()
-    .subscribe(dados => this.lista = dados)
-  }
+
 
   deletar(id:any){
     this.service.excluir(id).subscribe(retorno => {

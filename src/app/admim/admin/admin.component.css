@@ -12,7 +12,7 @@ table {
   width: 100%;
 }
 .list{
-  border: 20px solid rgba(247, 239, 239, 0.236);
+  border: 5px solid rgba(247, 239, 239, 0.236);
   background-color: rgba(0, 0, 0, 0.437);
 
 }
@@ -24,10 +24,14 @@ span{
   font-size: 11px;
 
 }
+ol{
+ margin-left: -1rem;
+}
 
-td{
+.textColor{
   color: rgba(255, 255, 255, 0.764);
   font-size: 11px;
+  float: left;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 0px 4px rgba(6, 0, 0, 0.75);
@@ -70,20 +74,30 @@ label{
   color: black;
   background-color: black;
 }
-/*
-td,th{
-  font-size: 11px;
-  font-weight: bold;
-  text-align: center;
+
+.loading-spinner{
+  padding: 25px;
+  background: rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-th{
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.color{
+background: black!important;
+}
+.nomeColor{
   text-align: center;
-  color: rgb(255, 255, 255);
-
-}*/
-.tamsanho{
-  width: 150px;
-
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: bold
 }
 
 .center{
@@ -92,7 +106,7 @@ th{
 
 @media (max-width: 767px){
   .logo{
-    float:right;
+    margin-left: 10px;
     text-transform: uppercase;
     font-weight: bold
   }
@@ -101,7 +115,7 @@ th{
 
 @media(max-width: 360px){
   .logo{
-    float:right;
+    margin-left: 10px;
     text-transform: uppercase;
     font-weight: bold
   }
