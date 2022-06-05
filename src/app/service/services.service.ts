@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { EMPTY, Observable, take, tap } from 'rxjs';
 import { map,catchError} from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Lista } from '../admin/model/lista';
 import { loginModelo } from '../models/loginModelo';
 
@@ -12,7 +13,7 @@ import { loginModelo } from '../models/loginModelo';
 })
 export class ServicesService {
 
-  private API ="http://localhost:8080/api/agendamento";
+  private API: string = environment.API;
 
   //autenticação
 
